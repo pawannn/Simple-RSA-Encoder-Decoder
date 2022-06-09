@@ -14,9 +14,20 @@ else:
     e = int(e)
 phin = (p-1)*(q-1) # phin value
 ciphertext = pow(pt, e, n) #ciphertext = pt^e mod n
+
+#Adding data to file
+data = open("Data.txt","w")
+data.write("Plaintext: "+plaintext)
+data.write("\n\n#Encrypted Data#\n")
+data.write("\np: "+str(p))
+data.write("\nq: "+str(q))
+data.write("\ne: "+str(e))
+data.write("\nCiphertext: "+str(ciphertext))
+data.close()
+
+#printing Encrypted data
 print("Plaintext: ", plaintext) #printing plaintext
 print("\np: ", p) #printing p
 print("\nq: ", q) #printing q
-print("\nn: ", n) #printing n
 print("\ne: ", e) #printing e 
 print("\nCiphertext: ", ciphertext) #printing ciphertext
